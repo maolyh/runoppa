@@ -16,7 +16,7 @@ class PopularOrganizations extends Controller
     {
         $popularOrganizationList = PopularOrganization::all();
         $statusList = Status::all();
-        return view('home', ['isBasicView' => false, 'title' => 'Organización Popular', 'route' => 'popularorganization', 'popularOrganizationList' => $popularOrganizationList, 'statusList' => $statusList]);
+        return view('home', ['isBasicView' => false, 'title' => 'Organización Popular', 'route' => 'popularorganization', 'tableList' => $popularOrganizationList, 'statusList' => $statusList]);
     }
     /**
      * Show the form for creating a new resource.
@@ -87,7 +87,7 @@ class PopularOrganizations extends Controller
     {
         $popularOrganizationSelected  = PopularOrganization::find($id);
         $statusList = Status::all();
-        return view('home', ['route' => 'popularorganization', 'title' => 'Organización Popular', 'isBasicView' => false, 'isEditable' => true, 'popularOrganizationSelected' => $popularOrganizationSelected, 'statusList' => $statusList]);
+        return view('home', ['route' => 'popularorganization', 'title' => 'Organización Popular', 'isBasicView' => false, 'isEditable' => true, 'rowSelected' => $popularOrganizationSelected, 'statusList' => $statusList]);
 
     }
 
@@ -121,9 +121,7 @@ class PopularOrganizations extends Controller
 
         $popularOrganization->save();
         if ($popularOrganization->save()) {
-            //return redirect('home');
-            $popularOrganizationList = PopularOrganization::all();
-            return view('home', ['isBasicView' => false, 'isEditable' => false, 'title' => 'Organización Popular', 'route' => 'popularorganization', 'popularOrganizationList' => $popularOrganizationList]);
+            return redirect(url('/popularorganization'));
         }
         else {
             return back()->with('error_msg', 'Error al guardar los Datos'); 

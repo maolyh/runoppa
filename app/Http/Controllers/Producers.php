@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Producer;
 use App\Status;
 
-class Statuss extends Controller
+class Producers extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +17,9 @@ class Statuss extends Controller
     public function index()
     {
         $statusList = Status::all();
-        return view('home', ['isBasicView' => true, 'route' => 'status', 'title'=>'Estatus', 'tableList'=>$statusList]);
+        return view('register', ['isBasicView' => false, 'title' => 'Productor Popular', 'route' => 'popularorganization', 'statusList' => $statusList]);
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -36,21 +38,7 @@ class Statuss extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'description' => 'required'
-            ]);
-
-        $status = new Status();
-        $status->name = $request->name;
-        $status->description = $request->description;
-        $status->save();
-        if ($status->save()) {
-            return back()->with('aprovalMessage', 'Datos guardados correctamente');
-        }
-        else {
-            return back()->with('errorMessage', 'Error al guardar los Datos'); 
-        }
+        //
     }
 
     /**
@@ -72,8 +60,7 @@ class Statuss extends Controller
      */
     public function edit($id)
     {
-        $statusListSelected  = Status::find($id);
-        return view('home', ['route' => 'status', 'title' => 'Estatus', 'isBasicView' => true, 'isEditable' => true, 'rowSelected' => $statusListSelected]);
+        //
     }
 
     /**
@@ -85,23 +72,7 @@ class Statuss extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'description' => 'required'
-            ]);
-
-        $status = Status::find($id);
-        $status->name = $request->name;
-        $status->description = $request->description;
-        $status->save();
-        if ($status->save()) {
-            return redirect(url('/status'));
-        }
-        else {
-            return back()->with('error_msg', 'Error al guardar los Datos'); 
-        }
-
-
+        //
     }
 
     /**
@@ -112,7 +83,6 @@ class Statuss extends Controller
      */
     public function destroy($id)
     {
-       Status::destroy($id);
-       return back();
+        //
     }
 }

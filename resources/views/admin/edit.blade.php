@@ -1,17 +1,17 @@
 @if(isset($isEditable))
   @if ($isEditable)
 
-    <form method="POST" action="{{route($route.'.update', $popularOrganizationSelected->id)}}" enctype="multipart/form-data">
+    <form method="POST" action="{{route($route.'.update', $rowSelected->id)}}" enctype="multipart/form-data">
       <!--<input type="hidden" name="_method" value="PUT">-->
       {{ method_field('PUT') }}
-      <input class="hide" type="text" name="img" value="{{$popularOrganizationSelected->logo}}">
+      <input class="hide" type="text" name="img" value="{{$rowSelected->logo}}">
       {{csrf_field()}}
   
       <div class="row">
         <div class="col-md-2"> 
           <label for="name">Nombre</label>
         </div>
-      <div class="col-md-10"><input type="text" name="name" value="{{$popularOrganizationSelected->name}}">
+      <div class="col-md-10"><input type="text" name="name" value="{{$rowSelected->name}}">
         @if ($errors->has('name'))
          <span style="color:red;">{{$errors->first('name')}}</span>
         @endif
@@ -22,7 +22,7 @@
         <div class="col-md-2"> 
           <label for="name">Descripción</label>
         </div>
-        <div class="col-md-10"><input type="text" name="description" value="{{$popularOrganizationSelected->description}}">
+        <div class="col-md-10"><input type="text" name="description" value="{{$rowSelected->description}}">
           @if ($errors->has('description'))
             <span style="color:red;">{{$errors->first('description')}}</span>
           @endif
@@ -35,7 +35,7 @@
           <div class="col-md-2"> 
            <label for="name">URL</label>
           </div>
-          <div class="col-md-10"><input type="text" name="url" value="{{$popularOrganizationSelected->url}}">
+          <div class="col-md-10"><input type="text" name="url" value="{{$rowSelected->url}}">
             @if ($errors->has('url'))
               <span style="color:red;">{{$errors->first('url')}}</span>
             @endif
@@ -46,7 +46,7 @@
             <label for="name">Logo</label>
           </div>
           <div class="col-md-10">
-            <input value="{{$popularOrganizationSelected->logo}}" type="file" class="form-control" name="logo" > 
+            <input value="{{$rowSelected->logo}}" type="file" class="form-control" name="logo" > 
               @if ($errors->has('logo'))
                 <span style="color:red;">{{$errors->first('logo')}}</span>
               @endif
@@ -61,7 +61,7 @@
             @if (isset($statusList))
               <select class="form-control" name="status">
                 @foreach($statusList as $list)
-                  @if ($list -> id == $popularOrganizationSelected->id_status)
+                  @if ($list -> id == $rowSelected->id_status)
                     {{$checked = "selected"}}
                   @else
                     {{$checked = ""}}

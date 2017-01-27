@@ -74,24 +74,40 @@
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                
-                 <a href="">
-                    Productores
-                    </a>
-                </div>
-
-                <div class="links">
-                    <a href="">Estatus</a>
+                           <a href="{{ url('/status') }}">Estatus</a>
                     <a href="{{ url('/popularorganization') }}">Organizaciones Populares</a>
                     <a href="">Unidades de producción</a>
                     <a href="">Redes sociales</a>
                     <a href="">Comunidades indígenas</a>
+                    @endif
+                </div>
+            @endif
+
+            <div class="lead">
+               <blockquote>
+                El RUNOPPA 2.0 es un software que permitirá mejorar los procesos de registro y
+las estadı́sticas del Ministerio de Agricultura Productiva y Tierras. La intención
+del registro es que el proceso sea sencillo y amigable para los productores
+del paı́s. Debido a esto la nueva versión del sistema se conceptualiza como
+un autoregistro que permita a los productores poder certificarse en cualquier
+momento de manera rápida.
+El autoregistro consta de dos fases; una de carga de información y otra de
+validación por medio de un baremo que indicará quien certifica como productor,
+en este último paso aquellos que no certifiquen como productores mediante el
+baremo, serán inspeccionados para validar la información y de cumplir con las
+condiciones, serán certificados.
+Además de esto, el proceso de autoregistro se fortalecerá con procesos de
+auditorías para aquellos productores que se encuentre certificados, mediante la
+toma de muestras estadisticamente significativas que permita darle fiabilidad
+respecto a la calidad de la información que ofrecerá. Para registrar sus datos hacer <a href="{{ url('/producer') }}"> click aquí</a>
+                
+        </blockquote>         
+                    
+                    
+                
+
+                <div class="links">
+                 
                 </div>
             </div>
         </div>
