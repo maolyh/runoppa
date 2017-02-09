@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Html\HtmlServiceProvider;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
 use App\PopularOrganization;
 use App\Status;
@@ -14,8 +15,18 @@ class PopularOrganizations extends Controller
 {
       public function index()
     {
-        $popularOrganizationList = PopularOrganization::all();
+        // $popularOrganizationList = PopularOrganization::all();
+        $popularOrganizationList = DB::table('popular_organization')->paginate(3);
+        //si queremos añadir una clausula where podemos hacer los siguiente
+        //->where('id', '=', '2'), 
+
         $statusList = Status::all();
+
+  
+       //$popularOrganizationList = DB::table('popular_organization')->join('status', 'popular_organization.id_status', '=', 'status.id')->paginate(5);
+        //$popularOrganizationList = DB::table('popular_organization')->paginate(5);
+        
+        
         return view('home', ['isBasicView' => false, 'title' => 'Organización Popular', 'route' => 'popularorganization', 'tableList' => $popularOrganizationList, 'statusList' => $statusList]);
     }
     /**
@@ -87,8 +98,8 @@ class PopularOrganizations extends Controller
     {
         $popularOrganizationSelected  = PopularOrganization::find($id);
         $statusList = Status::all();
-        return view('home', ['route' => 'popularorganization', 'title' => 'Organización Popular', 'isBasicView' => false, 'isEditable' => true, 'rowSelected' => $popularOrganizationSelected, 'statusList' => $statusList]);
-
+     
+        return view('home', ['route' => 'popularorganization', 'title' => 'Organización Popular', 'isBasicView' => false, 'isEditable' => true, 'rowSelected' => $popularOrganizationSelected, 'statusList' => $statusList])->render();
     }
 
     /**

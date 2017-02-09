@@ -1,43 +1,56 @@
 @if(isset($tableList))
-  <table class="table table-hover">
-    <thead>
-  	 <th>Nombre</th>
-  	 <th>Descripción</th>
-     @if(isset($tableList))
-     @if (!$isBasicView)
-  	  <th>URL</th>
-  	  <th>Logo</th>
-     @endif
-     @endif
-  	 <th></th>
-    </thead>
-    <tbody>
+     
+ <div class="row">
+      <div class="col-md-2"> <label for="name">Nombre</label> </div>
+      <div class="col-md-2"> <label for="name">Descripción</label> </div>
+      @if(isset($tableList))
+        @if (!$isBasicView)      
+          <div class="col-md-2"> <label for="name">URL</label> </div>
+          <div class="col-md-2"> <label for="name">Logo</label> </div>
+        @endif
+      @endif
+
+      <div class="col-md-2"> <label for="name">Estatus</label> </div>
+      <div class="col-md-2"> <label for="name">-</label> </div>
+ </div>     
       @foreach($tableList as $list)
-        <tr>
-          <td>{{$list->name}}</td>
-          <td>{{$list->description}}</td>
+        <div class="row">
+          <div class="col-md-2">{{$list->name}}</div>
+          <div class="col-md-2">{{$list->description}}</div>
           @if(isset($tableList))
-           @if (!$isBasicView)
-            <td>{{$list->url}}</td>
-            <td>
-              <img src="{{url('/')}}/imgLogo/{{$list->logo}}" class="img-responsive" alt="Responsive image">  
-            </td>
+            @if (!$isBasicView)
+              <div class="col-md-2">{{$list->url}}</div>
+              <div class="col-md-2">
+              <img src="{{url('/')}}/imgLogo/{{$list->logo}}" height="62" width="62" class="img-responsive" alt="Responsive image">  
+              </div>
+            @endif
           @endif
-          @endif
-          <td>
-            <a href="{{url('/')}}/{{$route}}/{{$list->id}}/edit">
+          <div class="col-md-2">{{$list->id_status}}</div>
+          <div class="col-md-2">
+            <!--<a href="{{url('/')}}/{{$route}}/{{$list->id}}/edit">-->
+          <a href="{{url($route)}}/{{$list->id}}/edit">
+           
             
             <img src="{{url('/')}}/img/edit.png" height="42" width="42" class="img-responsive" alt="Responsive image"></a>
+
+<!--<form action="{{route($route.'.edit',$list->id)}}" method="POST">
+             
+              <input type="hidden" name="_method" value="DELETE">
+             
+              <input type="submit" class="mydelete-icon">
+</form>-->
+
+
 
             <form action="{{route($route.'.destroy',$list->id)}}" method="POST">
               {{ csrf_field() }}
               <!--<input type="hidden" name="_method" value="DELETE">-->
               {{ method_field('DELETE') }}
-              <input type="submit" class="submit-icon">
+              <input type="submit" class="mydelete-icon">
             </form>
-          </td>
-        </tr>
+          </div>
+        </div>
       @endforeach
-    </tbody>
-  </table>
+     
+{{ $tableList->links() }}
 @endif

@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::resource('/status','Statuss');
 
 Route::resource('/popularorganization','PopularOrganizations');
@@ -22,6 +24,10 @@ Route::resource('/popularorganization','PopularOrganizations');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/index', function () {
+    return view('welcome');
+});
 
 Route::resource('/producer','Producers');
 

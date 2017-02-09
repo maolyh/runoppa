@@ -13,10 +13,10 @@
   {{csrf_field()}}
   
   <div class="row">
-    <div class="col-md-2"> 
+    <div class="col-sm-12 col-md-2"> 
       <label for="name">Nombre</label>
     </div>
-    <div class="col-md-10">
+    <div class="col-sm-12 col-md-10">
       <input type="text" name="name" placeholder="Nombre">
         @if ($errors->has('name'))
           <span style="color:red;">{{$errors->first('name')}}</span>
