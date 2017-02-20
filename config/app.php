@@ -166,6 +166,14 @@ return [
         /*
          * Package Service Providers...
          */
+        /*
+        scaffold
+        
+        Amranidev\ScaffoldInterface\ScaffoldInterfaceServiceProvider::class,
+        Amranidev\Ajaxis\AjaxisServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+        Vinkla\Pusher\PusherServiceProvider::class,
+*/
 
         //
 

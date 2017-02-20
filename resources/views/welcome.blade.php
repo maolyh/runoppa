@@ -30,6 +30,10 @@
 </head>
 <body>
 
+<?php
+// Imprime ejemplo 'Versión actual de PHP'
+//echo 'Versión actual de PHP: ' . phpversion();
+?>
 
 
 <div id="wrapper">

@@ -16,14 +16,14 @@ class PopularOrganizations extends Controller
       public function index()
     {
         // $popularOrganizationList = PopularOrganization::all();
-        $popularOrganizationList = DB::table('popular_organization')->paginate(3);
+       // $popularOrganizationList = DB::table('popular_organization')->paginate(3);
         //si queremos añadir una clausula where podemos hacer los siguiente
         //->where('id', '=', '2'), 
 
         $statusList = Status::all();
 
   
-       //$popularOrganizationList = DB::table('popular_organization')->join('status', 'popular_organization.id_status', '=', 'status.id')->paginate(5);
+       $popularOrganizationList = DB::table('popular_organization')->join('status', 'popular_organization.id_status', '=', 'status.id')->select('popular_organization.id as id', 'popular_organization.name as name', 'popular_organization.description as description', 'popular_organization.url as url', 'popular_organization.logo as logo', 'status.name as status_name')->paginate(5);
         //$popularOrganizationList = DB::table('popular_organization')->paginate(5);
         
         

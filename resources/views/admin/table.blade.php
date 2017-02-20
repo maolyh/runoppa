@@ -25,13 +25,13 @@
               </div>
             @endif
           @endif
-          <div class="col-md-2">{{$list->id_status}}</div>
-          <div class="col-md-2">
+          <div class="col-md-2">{{$list->status_name}}</div>
+          <div class="col-md-1">
             <!--<a href="{{url('/')}}/{{$route}}/{{$list->id}}/edit">-->
           <a href="{{url($route)}}/{{$list->id}}/edit">
            
             
-            <img src="{{url('/')}}/img/edit.png" height="42" width="42" class="img-responsive" alt="Responsive image"></a>
+            <img src="{{url('/')}}/img/edit.png" height="22" width="22" class="img-responsive" alt="Responsive image"></a>
 
 <!--<form action="{{route($route.'.edit',$list->id)}}" method="POST">
              
@@ -39,9 +39,9 @@
              
               <input type="submit" class="mydelete-icon">
 </form>-->
+</div>
 
-
-
+          <div class="col-md-1">
             <form action="{{route($route.'.destroy',$list->id)}}" method="POST">
               {{ csrf_field() }}
               <!--<input type="hidden" name="_method" value="DELETE">-->
