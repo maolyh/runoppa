@@ -71,7 +71,7 @@ return [
         'schema'   => 'public',
 
 
-        ],
+        ),
 
     ],
 
