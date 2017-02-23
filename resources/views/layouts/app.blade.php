@@ -76,13 +76,12 @@
                           </ul>       
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Tablas básicas <i class="fa fa-angle-down"></i></a>
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Catálogos básicas <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                               <li><a href="{{ url('/popularorganization') }}">Organizaciones populares</a></li>
                               <li><a href="">Comunidades indígenas</a></li>
-                              <li><a href="">Unidades de producción</a></li>
                               <li class="dropdown-submenu">
-                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">Básicas</a>
+                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">Básicos</a>
                                 <ul class="dropdown-menu">
                                   <li><a href="{{ url('/status') }}">Estatus</a></li>
                                   <li><a href="">Estado</a></li>
