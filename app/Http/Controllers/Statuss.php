@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use App\Status;
 
 class Statuss extends Controller
@@ -15,7 +16,8 @@ class Statuss extends Controller
      */
     public function index()
     {
-        $statusList = Status::all();
+        $statusList = DB::table('status')->paginate(5);
+        //$statusList = Status::all();
         return view('home', ['isBasicView' => true, 'route' => 'status', 'title'=>'Estatus', 'tableList'=>$statusList]);
     }
     /**

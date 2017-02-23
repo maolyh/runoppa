@@ -79,21 +79,21 @@
                             <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Tablas básicas <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                               <li><a href="{{ url('/popularorganization') }}">Organizaciones populares</a></li>
-                              <li><a href="components.html">Comunidades indígenas</a></li>
-                              <li><a href="pricing-box.html">Unidades de producción</a></li>
+                              <li><a href="">Comunidades indígenas</a></li>
+                              <li><a href="">Unidades de producción</a></li>
                               <li class="dropdown-submenu">
                                 <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">Básicas</a>
                                 <ul class="dropdown-menu">
                                   <li><a href="{{ url('/status') }}">Estatus</a></li>
-                                  <li><a href="right-sidebar.html">Estado</a></li>
-                                  <li><a href="left-sidebar.html">Parroquias</a></li>
-                                  <li><a href="comingsoon.html">Ciudades</a></li>
+                                  <li><a href="">Estado</a></li>
+                                  <li><a href="">Parroquias</a></li>
+                                  <li><a href="">Ciudades</a></li>
                                 </ul> 
                               </li>
                             </ul>
                         </li>
                         <li><a href="{{ url('/producer') }}">Productores</a></li>
-                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="">Contacto</a></li>
                     </ul>
                 </div>
             </div>

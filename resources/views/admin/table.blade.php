@@ -23,9 +23,10 @@
               <div class="col-md-2">
               <img src="{{url('/')}}/imgLogo/{{$list->logo}}" height="62" width="62" class="img-responsive" alt="Responsive image">  
               </div>
-            @endif
-          @endif
+           
           <div class="col-md-2">{{$list->status_name}}</div>
+           @endif
+          @endif
           <div class="col-md-1">
             <!--<a href="{{url('/')}}/{{$route}}/{{$list->id}}/edit">-->
           <a href="{{url($route)}}/{{$list->id}}/edit">
@@ -39,7 +40,7 @@
              
               <input type="submit" class="mydelete-icon">
 </form>-->
-</div>
+          </div>
 
           <div class="col-md-1">
             <form action="{{route($route.'.destroy',$list->id)}}" method="POST">
