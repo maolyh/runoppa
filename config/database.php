@@ -56,10 +56,10 @@ return [
         
 'pgsql' => array(
         'driver'   => 'pgsql',
-        'host'     => $host,
-        'database' => $database,
-        'username' => $username,
-        'password' => $password,
+        'host'     => 'ec2-23-21-111-81.compute-1.amazonaws.com',
+        'database' => 'd4bvhiq0m2lenh',
+        'username' => 'gyouwvxmkasacf',
+        'password' => 'e9a38fc3a4e3ab394b32581e424dbc11b3456e91d360b7ef7cc8d2e2401de277',
         'charset'  => 'utf8',
         'prefix'   => '',
         'schema'   => 'public',
