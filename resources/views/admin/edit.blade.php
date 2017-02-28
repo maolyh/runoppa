@@ -1,17 +1,17 @@
 @if(isset($isEditable))
   @if ($isEditable)
-
+<div class="hero-unit span8">
     <form method="POST" action="{{route($route.'.update', $rowSelected->id)}}" enctype="multipart/form-data">
       <!--<input type="hidden" name="_method" value="PUT">-->
       {{ method_field('PUT') }}
-      <input class="hide" type="text" name="img" value="{{$rowSelected->logo}}">
+      <input class="hide" type="hidden" name="img" value="{{$rowSelected->logo}}">
       {{csrf_field()}}
   
       <div class="row">
-        <div class="col-md-2"> 
+        <div class="span3"> 
           <label for="name">Nombre</label>
         </div>
-      <div class="col-md-10"><input type="text" name="name" value="{{$rowSelected->name}}">
+      <div class="span9"><input type="text" name="name" value="{{$rowSelected->name}}">
         @if ($errors->has('name'))
          <span style="color:red;">{{$errors->first('name')}}</span>
         @endif
@@ -19,10 +19,10 @@
       </div> 
     
       <div class="row">
-        <div class="col-md-2"> 
+        <div class="span3"> 
           <label for="name">Descripción</label>
         </div>
-        <div class="col-md-10"><input type="text" name="description" value="{{$rowSelected->description}}">
+        <div class="span9"><input type="text" name="description" value="{{$rowSelected->description}}">
           @if ($errors->has('description'))
             <span style="color:red;">{{$errors->first('description')}}</span>
           @endif
@@ -32,20 +32,20 @@
       @if (!$isBasicView) 
 
         <div class="row">
-          <div class="col-md-2"> 
+          <div class="span3"> 
            <label for="name">URL</label>
           </div>
-          <div class="col-md-10"><input type="text" name="url" value="{{$rowSelected->url}}">
+          <div class="span9"><input type="text" name="url" value="{{$rowSelected->url}}">
             @if ($errors->has('url'))
               <span style="color:red;">{{$errors->first('url')}}</span>
             @endif
           </div>
         </div> 
         <div class="row">
-          <div class="col-md-2"> 
+          <div class="span3"> 
             <label for="name">Logo</label>
           </div>
-          <div class="col-md-10">
+          <div class="span9">
             <input value="{{$rowSelected->logo}}" type="file" class="form-control" name="logo" > 
               @if ($errors->has('logo'))
                 <span style="color:red;">{{$errors->first('logo')}}</span>
@@ -53,10 +53,10 @@
           </div>
         </div> 
         <div class="row">
-          <div class="col-md-2"> 
+          <div class="span3"> 
             <label for="name">Status</label>
           </div>
-          <div class="col-md-10">
+          <div class="span9">
             <!-- Form::select('id', $lstatus, null, ['class' => 'form-control']) !!}-->
             @if (isset($statusList))
               <select class="form-control" name="status">
@@ -75,10 +75,18 @@
       @endif    
   
       <div class="form-group">
-        <div class="col-md-12">
+        <div class="span12">
           <button type="submit" class="btn btn-warning">Modificar</button>
         </div>
       </div>
     </form>
+    </div>
+     <div class="sidebar span4">
+   <div class="sidebox">
+   Son organizaciones no gubernamentales como organismos por los derechos humanos, organismo por la democracia, que ofrecen una respuesta a la pobreza, hacen propuestas de paz ante la inestabilidad del país que atañe toda la ciudadanía, independientemente de los partidos políticos o instituciones.
+   Organización popular, agrupa personas de un lugar o colonia que se unen para una lucha concreta: vivienda, escuelas, tierra.
+   </div>
+   </div>
+
   @endif
 @endif

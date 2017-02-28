@@ -10,15 +10,49 @@
  * Core: General Layout Style
  * -------------------------
  */
+
+/*@font-face {
+  font-family: '[set]Foundicons';
+  src: url('fonts/[set]_foundicons.eot');
+  src: url('fonts/[set]_foundicons.eot?#iefix') format('embedded-opentype'),
+       url('fonts/[set]_foundicons.woff') format('woff'),
+       url('fonts/[set]_foundicons.ttf') format('truetype'),
+       url('fonts/[set]_foundicons.svg#[set]Foundicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class*="foundicon-remove"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+[class*="foundicon-"]:before {
+  font-family: "[set]Foundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}*/
+
 .mydelete-icon {
+  
         background-image: url("../img/remove.png"); /* Change url to wanted image */
         background-size: cover;
         border: none;
-        width: 32px;
-        height: 32px;
+        width: 62px;
+        height:62px;
         cursor: pointer;
         color: transparent;
         }
+.rowselected {
+    background-color: #eee;
+}        
 
 .wrapper{
 	width: 960px;

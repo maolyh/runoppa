@@ -1,37 +1,22 @@
-<div class="container">
-
-    <div class="divPanel page-content">
-        <!--Edit Main Content Area here-->
-        <div class="row-fluid">
-
-                <div class="span12" id="divMain">
-
 @if (session()->has('aprovalMessage'))
-
   <div class="alert alert-success" role="alert">
     {{session('aprovalMessage')}}
   </div>
 @elseif (session()->has('errorMessage'))
-  <div class="alert alert-danger span8" role="alert">
+  <div class="alert alert-danger" role="alert">
     {{session('errorMessage')}}
   </div>
 @endif
-</div>
-</div>
-</div>
-</div>
 
 
-<div class="container">
-<div class="row-fluid">
-  <div class="hero-unit span8">
-  <form method="POST" action="{{url($route)}}" enctype="multipart/form-data">
+<form method="POST" action="{{url($route)}}" enctype="multipart/form-data">
   {{csrf_field()}}
+  
   <div class="row">
-    <div class="span3"> 
+    <div class="span2"> 
       <label for="name">Nombre</label>
     </div>
-    <div class="span9">
+    <div class="span10">
       <input type="text" name="name" placeholder="Nombre">
         @if ($errors->has('name'))
           <span style="color:red;">{{$errors->first('name')}}</span>
@@ -39,10 +24,10 @@
     </div>
   </div> 
   <div class="row">
-    <div class="span3"> 
+    <div class="span2"> 
       <label for="name">Descripción</label>
     </div>
-    <div class="span9"><input type="text" name="description" placeholder="Descripción">
+    <div class="span10"><input type="text" name="description" placeholder="Descripción">
       @if ($errors->has('description'))
        <span style="color:red;">{{$errors->first('description')}}</span>
       @endif
@@ -53,30 +38,30 @@
   @if (!$isBasicView) 
 
     <div class="row">
-      <div class="span3"> 
+      <div class="span2"> 
         <label for="name">URL</label>
       </div>
-      <div class="span9"><input type="text" name="url" placeholder="URL">
+      <div class="span10"><input type="text" name="url" placeholder="URL">
         @if ($errors->has('url'))
           <span style="color:red;">{{$errors->first('url')}}</span>
         @endif
       </div>
     </div> 
     <div class="row">
-      <div class="span3"> 
+      <div class="span2"> 
         <label for="name">Logo</label>
       </div>
-      <div class="span9"><input type="file" class="form-control" name="logo">
+      <div class="span10"><input type="file" class="form-control" name="logo">
         @if ($errors->has('logo'))
           <span style="color:red;">{{$errors->first('logo')}}</span>
         @endif
       </div>
     </div> 
     <div class="row">
-      <div class="span3"> 
+      <div class="span2"> 
         <label for="name">Status</label>
       </div>
-      <div class="span9">
+      <div class="span10">
         <!-- Form::select('id', $lstatus, null, ['class' => 'form-control']) !!}-->
         @if (isset($statusList))
           <select class="form-control" name="status">
@@ -95,14 +80,4 @@
       <button type="submit" class="btn btn-primary">Registrar</button>
     </div>
   </div>
-  
 </form>
-</div>
-   <div class="sidebar span4">
-   <div class="sidebox">
-   Son organizaciones no gubernamentales como organismos por los derechos humanos, organismo por la democracia, que ofrecen una respuesta a la pobreza, hacen propuestas de paz ante la inestabilidad del país que atañe toda la ciudadanía, independientemente de los partidos políticos o instituciones.
-   Organización popular, agrupa personas de un lugar o colonia que se unen para una lucha concreta: vivienda, escuelas, tierra.
-   </div>
-   </div>
-   </div>
-   </div>

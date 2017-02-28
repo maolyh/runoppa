@@ -5,32 +5,31 @@
     <title>RUNOPPA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">      
-  <meta name="author" content="Html5TemplatesDreamweaver.com">
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"> <!-- Remove this Robots Meta Tag, to allow indexing of site -->
-    
-    <link href="/bootstrap-gen-2/scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/bootstrap-gen-2/scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+      
+    <link href="bootstrap-gen-2/scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-gen-2/scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
     <link href="/css/mycss.css" rel="stylesheet" />
 
     <!-- Icons -->
-    <link href="/bootstrap-gen-2/scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />  
-    <link href="/bootstrap-gen-2/scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="bootstrap-gen-2/scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />  
+    <link href="bootstrap-gen-2/scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
     <!--[if lt IE 8]>
         <link href="scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
         <link href="scripts/icons/social/stylesheets/social_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link rel="stylesheet" href="/bootstrap-gen-2/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap-gen-2/scripts/fontawesome/css/font-awesome.min.css">
     <!--[if IE 7]>
         <link rel="stylesheet" href="scripts/fontawesome/css/font-awesome-ie7.min.css">
     <![endif]-->
 
-    <link href="/bootstrap-gen-2/scripts/carousel/style.css" rel="stylesheet" type="text/css" />
-    <link href="/bootstrap-gen-2/scripts/camera/css/camera.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap-gen-2/scripts/carousel/style.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap-gen-2/scripts/camera/css/camera.css" rel="stylesheet" type="text/css" />
 
     <link href="http://fonts.googleapis.com/css?family=Allura" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" type="text/css">
@@ -40,7 +39,7 @@
     <link href="http://fonts.googleapis.com/css?family=Palatino+Linotype" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet" type="text/css">
 
-    <link href="/bootstrap-gen-2/styles/custom.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap-gen-2/styles/custom.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="pageBody">
 
@@ -53,7 +52,7 @@
 
                     <div id="divLogo" class="pull-left">
                         <a href="index.html" id="divSiteTitle">Runoppa</a><br />
-                        <a href="index.html" id="divTagLine">Autoregistro de productores agrícolas</a>
+                        <a href="index.html" id="divTagLine">Registro Único Obligatorio <br>Permanente de Productores Agrícolas</a>
                     </div>
 
                     <div id="divMenuRight" class="pull-right">
@@ -63,8 +62,8 @@
                         </button>
                         <div class="nav-collapse collapse">
                             <ul class="nav nav-pills ddmenu">
-                                <li class="dropdown active"><a href="">Inicio</a></li>
-                <li class="dropdown"><a href="">Productores</a></li>
+                                <li class="dropdown active"><a href="/">Inicio</a></li>
+                <li class="dropdown"><a href="{{ url('/producer') }}">Productores</a></li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle">Catálogos <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -95,46 +94,37 @@
 
     </div>
 </div>
+
   <!-- end header -->
   
- <div id="contentOuterSeparator"></div>
-
 <div class="container">
-
-    <div class="divPanel page-content">
-        <!--Edit Main Content Area here-->
-        <div class="row-fluid">
-
-                <div class="span12" id="divMain">
-
+  <div class="divPanel page-content">
+    <!--Edit Main Content Area here-->
+    <div class="row-fluid">
+      <div class="span12" id="divMain">
         @yield('content')
-        </div>
-        </div>
-
-      </div>    
+       </div>    
     </div>
-    </div>
-    
+  </div>
+</div>  
     
   
-    
-    
-    
-    
+<div id="footerInnerSeparator"></div>    
 <div id="footerOuterSeparator"></div>
 
 <div id="divFooter" class="footerArea">
 
-    <div class="container">
+  <div class="container">
 
-        <div class="divPanel">
+    <div class="divPanel">
 
-            <div class="row-fluid">
-                <div class="span3" id="footerArea1">
+      <div class="row-fluid">
+        
+        <div class="span3" id="footerArea1">
                 
                     <h3>Nosotros</h3>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+                    <p>Ministerio del Poder Popular para la Agricultura Productiva y Tierras</p>
                     
                     <p> 
                         <a href="#" title="Terms of Use">Términos de uso</a><br />
@@ -142,36 +132,29 @@
                         <a href="#" title="FAQ">FAQ</a><br />
                     </p>
 
-                </div>
-                <div class="span3" id="footerArea2">
+        </div>
+        <div class="span3" id="footerArea2">
 
-                    <h3>Mejoras</h3> 
+                    <h3>Normativa</h3> 
                     <p>
-                        <a href="#" title="">Lorem Ipsum is simply dummy text</a><br />
-                        <span style="text-transform:none;">2 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Duis mollis, est non commodo luctus</a><br />
-                        <span style="text-transform:none;">5 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Maecenas sed diam eget risus varius</a><br />
-                        <span style="text-transform:none;">19 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">VIEW ALL POSTS</a>
+                        <a href="#" title="">Si deseas conocer más acerca de nuestra nomativa, visita nuestro espacio</a><br />
+                    
                     </p>
 
-                </div>
-                <div class="span3" id="footerArea3">
+        </div>
+        <div class="span3" id="footerArea3">
 
                     <h3>Lo nuevo</h3> 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s. 
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.
+                    <p>Nuestras mejoras inclyen:
+                    <ul>
+                    <li>xxxx</li>
+                    <li>yyyy</li>
+                    <li>zzzz</li>
+                    </ul>
                     </p>
 
-                </div>
-                <div class="span3" id="footerArea4">
+        </div>
+        <div class="span3" id="footerArea4">
 
                     <h3>Contacto</h3>  
                                                                
@@ -198,30 +181,32 @@
                     </li>
                     </ul>
 
-                </div>
-            </div>
-
-            <br /><br />
-            <div class="row-fluid">
-                <div class="span12">
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
                     <p class="copyright">
                         Copyright © 2017 MPPAT. Todos los derechos reservados.
                     </p>
 
                     <p class="social_bookmarks">
                         <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
-      <a href=""><i class="social foundicon-twitter"></i> Twitter</a>
-      <a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
-      <a href="#"><i class="social foundicon-rss"></i> Rss</a>
+          <a href=""><i class="social foundicon-twitter"></i> Twitter</a>
+          <a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
+          <a href="#"><i class="social foundicon-rss"></i> Rss</a>
                     </p>
-                </div>
-            </div>
-            <br />
-
         </div>
-
+      </div>
     </div>
-    
+  </div>
 </div>
+<script src="bootstrap-gen-2/scripts/jquery.min.js" type="text/javascript"></script> 
+<script src="bootstrap-gen-2/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="bootstrap-gen-2/scripts/default.js" type="text/javascript"></script>
+
+
+<script src="bootstrap-gen-2/scripts/carousel/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script><script type="text/javascript">$('#list_photos').carouFredSel({ responsive: true, width: '100%', scroll: 2, items: {width: 320,visible: {min: 2, max: 6}} });</script><script src="bootstrap-gen-2/scripts/camera/scripts/camera.min.js" type="text/javascript"></script>
+<script src="bootstrap-gen-2/scripts/easing/jquery.easing.1.3.js" type="text/javascript"></script>
+<script type="text/javascript">function startCamera() {$('#camera_wrap').camera({ fx: 'scrollLeft', time: 2000, loader: 'none', playPause: false, navigation: true, height: '65%', pagination: true });}$(function(){startCamera()});</script>
 </body>
 </html>

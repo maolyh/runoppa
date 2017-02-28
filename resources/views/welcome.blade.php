@@ -5,9 +5,7 @@
     <title>RUNOPPA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">      
-  <meta name="author" content="Html5TemplatesDreamweaver.com">
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"> <!-- Remove this Robots Meta Tag, to allow indexing of site -->
-    
+      
     <link href="bootstrap-gen-2/scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap-gen-2/scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -54,7 +52,7 @@
 
                     <div id="divLogo" class="pull-left">
                         <a href="index.html" id="divSiteTitle">Runoppa</a><br />
-                        <a href="index.html" id="divTagLine">Autoregistro de productores agrícolas</a>
+                        <a href="index.html" id="divTagLine">Registro Único Obligatorio <br>Permanente de Productores Agrícolas</a>
                     </div>
 
                     <div id="divMenuRight" class="pull-right">
@@ -65,7 +63,7 @@
                         <div class="nav-collapse collapse">
                             <ul class="nav nav-pills ddmenu">
                                 <li class="dropdown active"><a href="">Inicio</a></li>
-                <li class="dropdown"><a href="">Productores</a></li>
+                <li class="dropdown"><a href="{{ url('/producer') }}">Productores</a></li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle">Catálogos <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -147,7 +145,7 @@
 
                 <div class="span12" id="divMain">
 
-                    <h1>Historia</h1>
+                    <h3 class="text-success">Historia</h3>
 
                     <p><strong>RUNOPPA 2.0</strong>  es un software que permitirá mejorar los procesos de registro y
             las estadı́sticas del Ministerio de Agricultura Productiva y Tierras. La intención
@@ -166,15 +164,20 @@
             respecto a la calidad de la información que ofrecerá.</p></p>
           
           
-              <h1>Objetivos</h1>         
+              <h3 class="text-success">Objetivos</h3>         
           <p>
-          <ul>
-            <li>Crear usuario y contraseña por parte de los productores para registrase y actualizar los datos del mismo</li>
-            <li>Recuperar usuario y contraseña por medio de correo electrónico.</li>
-            <li>Formulario de registro con los campos especificados por las unidades técnicas</li>
-            <li>Permitir la actualización de datos por medio del usuario.</li>
-            <li>Desarrollar el módulo para la gestión de usuarios (asignación de roles).</li>   
-          </ul> 
+          El Registro Único Obligatorio Permanente de Productores y Productoras
+Agrícolas (RUNOPPA), tiene como finalidad la consolidación y concentración de los
+datos que deben suministrar las personas naturales o jurídicas, empresa de
+servicios y la agroindustria que realicen actividades relacionadas con la producción
+agrícola vegetal, animal de manera directa o indirecta que contribuyan a la
+comercialización,
+distribución,
+transformación,
+transporte,
+fabricación,
+almacenamiento, en materia agrícola a nivel nacional, las cuales están obligadas a
+inscribirse en el referido Registro.
           </p>
 
 
@@ -185,21 +188,21 @@
                     <div class="span4">
                     <h4>Pecuario</h4>
                     <img src="bootstrap-gen-2/images/ganado.jpeg" class="img-polaroid" style="margin:5px 0px 15px;" alt="">                
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  <br /></p>
+                    <p>Se denomina pecuaria a aquella actividad relacionada con la producción de ganado, y forma un sector esencial dentro de las actividades agropecuarias, que a su vez se constituyen como actividades primarias dentro de la economía  <br /></p>
           <p><a class="btn btn-primary" style="margin:5px 0px 15px;">Leer más</a></p>
                     </div>
           
                     <div class="span4">                
                     <h4>Agroindustria</h4>
                     <img src="bootstrap-gen-2/images/agroindustria.jpeg" class="img-polaroid" style="margin:5px 0px 15px;" alt="">  
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.   <br /></p>
+                    <p>La agroindustria es la actividad económica que comprende la producción, industrialización y comercialización de productos agropecuarios, forestales y otros recursos naturales biológicos. Implica la agregación de valor a productos de la industria agropecuaria, la silvicultura y la pesca. Facilita la durabilidad y disponibilidad del producto de una época a otra, sobre todo aquellos que son más perecederos. Esta rama de industrias se divide en dos categorías, alimentaria y no alimentaria, la primera se encarga de la transformación de los productos de la agricultura, ganadería, riqueza forestal y pesca, en productos de elaboración para el consumo alimenticio, en esta transformación se incluye los procesos de selección de calidad, clasificación (por tamaño), embalaje-empaque y almacenamiento de la producción agrícola, a pesar que no haya transformación en sí y también las transformaciones posteriores de los productos y subproductos obtenidos de la primera transformación de la materia prima agrícola. La rama no-alimentaria es la encargada de la parte de transformación de estos productos que sirven como materias primas, utilizando sus recursos naturales para realizar diferentes productos industriales.  <br /></p>
           <p><a class="btn btn-primary" style="margin:5px 0px 15px;">Leer más</a></p>
                     </div>
           
                     <div class="span4">                
                     <h4>Vegetal</h4>
                     <img src="bootstrap-gen-2/images/vegetales.jpeg" class="img-polaroid" style="margin:5px 0px 15px;" alt="">  
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.   <br /></p>
+                    <p>Conjunto de actividades y conocimientos desarrollados por el hombre, destinados a cultivar la tierra y cuya finalidad es obtener productos vegetales (como verduras, frutos, granos y pastos) para la alimentación del ser humano y del ganado..   <br /></p>
           <p><a class="btn btn-primary" style="margin:5px 0px 15px;">Leer más</a></p>
                     </div>
           
@@ -208,36 +211,47 @@
             <hr style="margin:45px 0 35px" />
 
                     <div class="lead">
-                        <h1>Lorem ipsum dolor sit amet.</h1> 
-                        <h3>Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus.</h3>
+                        <h1>Runoppa se acerca más a ti</h1> 
+                        <h3>Regístrate y certifícate en línea. Obtén los permisos necesarios para crecer como productor</h3>
                     </div>
                     <br />
 
                     <div class="list_carousel responsive">
                         <ul id="list_photos">
-                            <li><img src="bootstrap-gen-2/carousal/muffin.jpg" class="img-polaroid">  </li>
-                            <li><img src="bootstrap-gen-2/carousal/strawberries.jpg" class="img-polaroid">  </li>
-                            <li><img src="bootstrap-gen-2/carousal/cheesecake.jpg" class="img-polaroid">  </li>
-                            <li><img src="bootstrap-gen-2/carousal/peppers.jpg" class="img-polaroid">  </li>
-                            <li><img src="bootstrap-gen-2/carousal/pomengranates.jpg" class="img-polaroid">  </li>
-                            <li><img src="bootstrap-gen-2/carousal/refreshment.jpg" class="img-polaroid">  </li>
-                            <li><img src="bootstrap-gen-2/carousal/kitchen.jpg" class="img-polaroid">  </li>
-                            <li><img src="bootstrap-gen-2/carousal/soup.jpg" class="img-polaroid">  </li>                            
+                            <li><img src="bootstrap-gen-2/carousal/imagen1.jpg" class="img-polaroid">  </li>
+                            <li><img src="bootstrap-gen-2/carousal/imagen2.jpeg" class="img-polaroid">  </li>
+                            <li><img src="bootstrap-gen-2/carousal/imagen3.jpeg" class="img-polaroid">  </li>
+                            <li><img src="bootstrap-gen-2/carousal/imagen4.jpeg" class="img-polaroid">  </li>
+                            <li><img src="bootstrap-gen-2/carousal/imagen5.jpeg" class="img-polaroid">  </li>
+                            <li><img src="bootstrap-gen-2/carousal/imagen6.jpeg" class="img-polaroid">  </li>
+                            <li><img src="bootstrap-gen-2/carousal/imagen7.jpeg" class="img-polaroid">  </li>
+                            <li><img src="bootstrap-gen-2/carousal/imagen8.jpeg" class="img-polaroid">  </li>                            
                         </ul>
                     </div> 
           
           </br>
           
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu metus risus. Mauris a facilisis justo, sit amet ornare lorem. In volutpat laoreet nisi, ac tempus dui convallis eget. Ut id lorem at leo suscipit dignissim. Donec eleifend porta sagittis. Aliquam at ullamcorper sem, et commodo quam.</p></br>
+          <p>El Ejecutivo Nacional por órgano del Ministerio del Poder Popular para la
+Agricultura Productiva y Tierras, a efectos de incentivar la producción agrícola y de
+generar políticas públicas eficientes para optimizar la comercialización del mercado
+agrícola para el beneficio de los productores, productoras y consumidores establece normas que permiten al Registro Único Obligatorio Permanente
+de Productores Agrícolas (RUNOPPA), formular, supervisar y evaluar la totalidad de
+la producción, particularmente las relacionadas con la producción vegetal, animal y
+agroindustrial de manera directa o indirecta..</p></br>
           <!--Edit Blockquote here-->
           <blockquote>
           
-                    <h3 class="text-success">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</h3>
-                    <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+                    <h3 class="text-success">Recuerda actualizar la información anualmente</h3>
+                    <small>Mantén al día tu certificado </small>
           
                     </blockquote>
           <!--/End Blockquote-->  
-          <p>Aenean vulputate magna ipsum, vitae elementum tortor aliquam eu. Nullam rutrum erat eu purus cursus, a volutpat orci lacinia. Sed sed sem mollis, egestas tellus vel, posuere sapien. Sed at ipsum ullamcorper, ultrices elit at, accumsan nulla. Suspendisse lobortis neque ac diam vehicula, gravida commodo sem adipiscing. Quisque nec libero nibh.</p>
+          <p>Las organizaciones productivas del poder popular del Estado, mixtas o
+privadas en materia agrícola deberán estar inscritas en el Registro Único Obligatorio
+Permanente de Productores Agrícolas (RUNOPPA), todo ello con el objeto de
+establecer la planificación y ejecución de su producción. Cabe acotar que de no cumplir con las
+exigencias técnico legales, el Ministerio del Poder Popular para la Agricultura
+Productiva y Tierras, podrá revocar el certificado emitido por el Sistema.</p>
                             
                    
 
@@ -246,11 +260,12 @@
             </div>
       <!--End Main Content Area here-->
 
-        <div id="footerInnerSeparator"></div>
+        
     </div>
 
 </div>
 
+<div id="footerInnerSeparator"></div>
 <div id="footerOuterSeparator"></div>
 
 <div id="divFooter" class="footerArea">
@@ -264,7 +279,7 @@
                 
                     <h3>Nosotros</h3>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+                    <p>Ministerio del Poder Popular para la Agricultura Productiva y Tierras</p>
                     
                     <p> 
                         <a href="#" title="Terms of Use">Términos de uso</a><br />
@@ -275,29 +290,22 @@
                 </div>
                 <div class="span3" id="footerArea2">
 
-                    <h3>Mejoras</h3> 
+                    <h3>Normativa</h3> 
                     <p>
-                        <a href="#" title="">Lorem Ipsum is simply dummy text</a><br />
-                        <span style="text-transform:none;">2 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Duis mollis, est non commodo luctus</a><br />
-                        <span style="text-transform:none;">5 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Maecenas sed diam eget risus varius</a><br />
-                        <span style="text-transform:none;">19 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">VIEW ALL POSTS</a>
+                        <a href="#" title="">Si deseas conocer más acerca de nuestra nomativa, visita nuestro espacio</a><br />
+                    
                     </p>
 
                 </div>
                 <div class="span3" id="footerArea3">
 
                     <h3>Lo nuevo</h3> 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s. 
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.
+                    <p>Nuestras mejoras inclyen:
+                    <ul>
+                    <li>xxxx</li>
+                    <li>yyyy</li>
+                    <li>zzzz</li>
+                    </ul>
                     </p>
 
                 </div>
@@ -330,8 +338,6 @@
 
                 </div>
             </div>
-
-            <br /><br />
             <div class="row-fluid">
                 <div class="span12">
                     <p class="copyright">
@@ -346,12 +352,8 @@
                     </p>
                 </div>
             </div>
-            <br />
-
         </div>
-
     </div>
-    
 </div>
 
 <script src="bootstrap-gen-2/scripts/jquery.min.js" type="text/javascript"></script> 
