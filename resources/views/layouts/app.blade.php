@@ -200,6 +200,44 @@
     </div>
   </div>
 </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.0/vue.js"></script>
+<script>
+var valor = new Vue({
+  el: '#valor',
+  data: {
+    picked: '',
+    preidentificator: '',
+    identificator: '',
+    naturalBlock: false,
+    block: false,
+    legalBlock: false
+  },
+    methods: {
+    greet: function (event) {
+      // `this` inside methods points to the Vue instance
+      if (this.picked === "Persona Natural") {
+        this.preidentificator = 'Nacionalidad';
+        this.identificator = 'Cédula o Nro.Pasaporte';
+        this.naturalBlock = true;
+        this.legalBlock = false;
+        this.block = true;
+      }
+        
+        else {
+            this.preidentificator = 'Código';
+            this.identificator = 'RIF';
+            this.naturalBlock = false;
+            this.legalBlock = true;
+            this.block = true;
+        }
+      // `event` is the native DOM event
+      
+    }
+  }
+})
+</script>
+<!--<script src="../node_modules/vue/dist/vue.js" type="text/javascript"></script> -->
+<script src="/js/runoppa.js" type="text/javascript"></script> 
 <script src="/bootstrap-gen-2/scripts/jquery.min.js" type="text/javascript"></script> 
 <script src="/bootstrap-gen-2/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/bootstrap-gen-2/scripts/default.js" type="text/javascript"></script>
