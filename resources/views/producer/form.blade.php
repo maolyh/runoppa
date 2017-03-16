@@ -4,48 +4,42 @@
 {{csrf_field()}}
 
 <div class="container">
-  <div class="row-fluid">
-    <div class="hero-unit span10">
+  
+   
       <div id="valor">
         <div class="row">
-          <div class="span3"> 
+          <div class="span2"> 
             <label for="persontype">Tipo de persona</label>
           </div>
          
-          <div class="span1"><input type="radio" id="naturalPersonType" name="PT" value="Persona Natural" v-model="picked" v-on:change="greet"> </div>
-          <div class="span2"><label for="naturalPersonType">Natural</label></div>
-          <div class="span1"><input type="radio" id="legalPersonType" name="PT" value="Persona Jurídica" v-model="picked" v-on:change="greet" ></div>
-          <div class="span2"><label for="legalPersonType">Jurídica</label></div>
+          <div class="span10"><input type="radio" id="naturalPersonType" name="PT" value="Persona Natural" v-model="picked" v-on:change="greet"> 
+          <label for="naturalPersonType">Natural</label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" id="legalPersonType" name="PT" value="Persona Jurídica" v-model="picked" v-on:change="greet" >
+          <label for="legalPersonType">Jurídica</label>
+          </div>
         </div>
         
         <hr>
-        <div class="row">
-          <div class="span12 panel-title">
-           <label for="personTypeSelected"><h3> @{{picked}}</h3> </label>
-          </div>
-        </div>  
-      <hr>
+        
        <div id="block" v-if="block">
       <!-- Inicio del acordeon-->
       <div class="row">
-          <div class="span12">
- <div class="panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        Información Personal</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body">
-        
-        
-                
-          <div class="row"> 
-            <div class="span2">
+        <div class="span12">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                  <i class="general foundicon-plus icon"></i>
+                  Información Personal - @{{picked}}</a>
+                </h4>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse in">
+               <div class="panel-body">
+               <!-- <div class="row"> -->
+               <div class="span2">
               <label for="preidentificator">@{{preidentificator}} </label>
-            </div>
+           </div>
             <div class="span4">
               <input type="text"  name="preidentificator" id="preidentificator" placeholder="">
             </div>
@@ -55,11 +49,11 @@
             <div class="span4">
               <input type="text" name="identificator" id="identificator" placeholder="Documento">
             </div>
-          </div>
+          <!--</div>-->
 
           <div id="naturalPerson" v-if="naturalBlock">
             <!--Natural Person-->
-            <div class="row">
+            <!--<div class="row">-->
               <div class="span2"> 
                 <label for="firstname">Primer Nombre</label>
               </div>
@@ -72,9 +66,9 @@
               <div class="span4">
                 <input type="text" class="form-control" id="secondname" name="secondname" placeholder="Segundo nombre">
               </div>
-            </div>
+            <!--</div>-->
 
-            <div class="row">
+            <div id="apellidos">
               <div class="span2"> 
                 <label for="lastname">Primer apellido</label>
               </div>
@@ -88,9 +82,9 @@
               <div class="span4">
                 <input type="text" class="form-control" id="surname" name="surname" placeholder="Segundo apellido">
               </div>
-            </div>  
+            </div> 
 
-            <div class="row">
+            <div id="datos">
               <div class="span2">
                 <label for="birthdate">Fecha de nacimiento</label>
               </div>
@@ -100,30 +94,24 @@
               <div class="span2">
                 <label for="sex">Sexo</label>
               </div>  
-              <div class="span1">
+              <div class="span4">
                 <input type="radio" name="sex" checked>
-                </div>
-                <div class="span1">
                  <label for="sex">F</label>
-                </div>
-                <div class="span1">
+               &nbsp; &nbsp; &nbsp; &nbsp;
                  <input type="radio" name="sex">
-                 </div>
-                <div class="span1">
                  <label for="sex"> M </label>
-                 </div>
               </div>
               
-              <div class="row">
+              <div id="estadocivil">
               <div class="span2">
                 <label for="civilstate">Estado civil</label>
               </div>  
               <div class="span10">
                 <input type="text" class="form-control" id="civilstate" name="civilstate" placeholder="Estado civil">
               </div>    
-            </div> 
+            </div>
 
-            <div class="row">
+            <div id="nivelinstruccion">
               <div class="span2">
                 <label for="instructionlevel">Nivel de instrucción</label>
               </div>    
@@ -134,14 +122,14 @@
           </div> 
 
  <div id="legalPerson" v-if="legalBlock">
-          <div class="row">
+         <div id="razonsocial">
             <div class="span2">
               <label for="socialname">Razón social</label>
             </div>
               <div class="span10">
                 <input type="text" class="form-control" id="socialname" name="socialname" placeholder="Razón social">
               </div>
-            </div>
+           </div>
          </div>             
            
 
@@ -159,7 +147,7 @@
     </div>
     <div id="collapse2" class="panel-collapse collapse">
       <div class="panel-body">
- <div class="row">
+ <div>
             <div class="span2">
               <label for="homephone">Teléfono local</label>
             </div>
@@ -174,7 +162,7 @@
             </div>
           </div>  
                  <div id="legalPerson" v-if="legalBlock">
-          <div class="row">
+          <div>
             <div class="span2">
               <label for="homephone2">Teléfono local 2</label>
             </div>
@@ -191,7 +179,7 @@
          </div> 
       <!--End Legal Person-->
 
-          <div class="row">
+          <div>
             <div class="span2">
               <label for="email">Email</label>
             </div>
@@ -201,7 +189,7 @@
           </div>
           <hr>
           <div class="divider"></div>
-          <div class="row">
+          <div>
             <div class="span2">
               <label for="state">Estado</label>
             </div>
@@ -209,7 +197,7 @@
                 <input type="text" class="form-control" id="state" name="state" placeholder="Estado">
             </div>
           </div>
-          <div class="row">
+          <div>
             <div class="span2">
               <label for="state">Ciudad</label>
             </div>
@@ -217,7 +205,7 @@
                 <input type="text" class="form-control" id="ity" name="city" placeholder=Ciudad>
             </div>
           </div>
-          <div class="row">
+          <div>
             <div class="span2">
               <label for="state">Municipio</label>
             </div>
@@ -225,7 +213,7 @@
                 <input type="text" class="form-control" id="state" name="state" placeholder="Municipio">
             </div>
           </div>
-          <div class="row">
+          <div>
             <div class="span2">
               <label for="state">Parroquia</label>
             </div>
@@ -233,7 +221,7 @@
                 <input type="text" class="form-control" id="state" name="state" placeholder="Parroquia">
             </div>
           </div>
-          <div class="row">
+          <div>
             <div class="span2">
              <label for="state">Dirección</label>
             </div>
@@ -286,8 +274,8 @@
         </div>
       </div>
       </div>
-    </div> 
-  </div>
+    
+  
   </div>
 </div>
 </form>
