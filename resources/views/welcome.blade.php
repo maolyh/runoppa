@@ -40,6 +40,7 @@
     <link href="http://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet" type="text/css">
 
     <link href="bootstrap-gen-2/styles/custom.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body id="pageBody">
 
@@ -163,6 +164,41 @@
             toma de muestras estadisticamente significativas que permita darle fiabilidad
             respecto a la calidad de la información que ofrecerá.</p></p>
           
+          <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+             <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#panel1"><i class="general foundicon-minus"></i>Panel 1</a>
+            </h4>
+
+        </div>
+        <div id="panel1" class="panel-collapse collapse in">
+            <div class="panel-body">Contents panel 1</div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+             <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#panel2"><i class="general foundicon-plus"></i>Panel 2</a>
+            </h4>
+
+        </div>
+        <div id="panel2" class="panel-collapse collapse">
+            <div class="panel-body">Contents panel 2</div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+             <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#panel3"><i class="general foundicon-plus"></i>Panel 3</a>
+            </h4>
+
+        </div>
+        <div id="panel3" class="panel-collapse collapse">
+            <div class="panel-body">Contents panel 3</div>
+        </div>
+    </div>
+</div>
           
               <h3 class="text-success">Objetivos</h3>         
           <p>
@@ -355,7 +391,8 @@ Productiva y Tierras, podrá revocar el certificado emitido por el Sistema.</p>
         </div>
     </div>
 </div>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.0/vue.js"></script>
+<!--<script src="/node_modules/vue/dist/vue.js" type="text/javascript"></script>-->
 <script src="bootstrap-gen-2/scripts/jquery.min.js" type="text/javascript"></script> 
 <script src="bootstrap-gen-2/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="bootstrap-gen-2/scripts/default.js" type="text/javascript"></script>
@@ -365,6 +402,25 @@ Productiva y Tierras, podrá revocar el certificado emitido por el Sistema.</p>
 <script src="bootstrap-gen-2/scripts/easing/jquery.easing.1.3.js" type="text/javascript"></script>
 <script type="text/javascript">function startCamera() {$('#camera_wrap').camera({ fx: 'scrollLeft', time: 2000, loader: 'none', playPause: false, navigation: true, height: '65%', pagination: true });}$(function(){startCamera()});</script>
 
+<script>
+   // alert("poraqui");
+    var selectIds = $('#panel1,#panel2,#panel3');
+$(function ($) {
+ //alert("por aqui2");
+    selectIds.on('show.bs.collapse hidden.bs.collapse', function () {
+    //  selectIds.on("hide.bs.collapse show.bs.collapse", ".collapse", function (event) {
+          //alert("porqui 3");
+        $(this).prev().find('.general').toggleClass('foundicon-plus foundicon-minus');
+        //event.stopPropagation();
+    })
+});
+
+/*selectIds.on("hide.bs.collapse show.bs.collapse", ".collapse", function (event) {
+    $(this).prev().find('.general').toggleClass('foundicon-plus foundicon-minus');
+    $(this).prev().find("span.pull-right.text-muted").toggleClass("expandir fechar");
+    event.stopPropagation();
+});*/
+</script>
 
 </body>
 </html>

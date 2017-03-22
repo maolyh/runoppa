@@ -6,42 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">      
       
-    <link href="/bootstrap-gen-2/scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/bootstrap-gen-2/scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="bootstrap-gen-2/scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-gen-2/scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
-    <link href="../css/mycss.css" rel="stylesheet" />
+    <link href="css/mycss.css" rel="stylesheet" />
 
     <!-- Icons -->
-    <link href="/bootstrap-gen-2/scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />  
-    <link href="/bootstrap-gen-2/scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="bootstrap-gen-2/scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />  
+    <link href="bootstrap-gen-2/scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
     <!--[if lt IE 8]>
         <link href="scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
         <link href="scripts/icons/social/stylesheets/social_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link rel="stylesheet" href="bootstrap-gen-2/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bootstrap-gen-2/scripts/fontawesome/css/font-awesome.min.css">
     <!--[if IE 7]>
         <link rel="stylesheet" href="scripts/fontawesome/css/font-awesome-ie7.min.css">
     <![endif]-->
-
-    <link href="/bootstrap-gen-2/scripts/carousel/style.css" rel="stylesheet" type="text/css" />
-    <link href="/bootstrap-gen-2/scripts/camera/css/camera.css" rel="stylesheet" type="text/css" />
 
     <link href="http://fonts.googleapis.com/css?family=Allura" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Palatino+Linotype" rel="stylesheet" type="text/css">
+   <!-- <link href="http://fonts.googleapis.com/css?family=Palatino+Linotype" rel="stylesheet" type="text/css">-->
     <link href="http://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet" type="text/css">
 
-    <link href="/bootstrap-gen-2/styles/custom.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap-gen-2/styles/custom.css" rel="stylesheet" type="text/css" />
+ <!-- <script
+              src="https://code.jquery.com/jquery-3.2.0.js"
+              integrity="sha256-wPFJNIFlVY49B+CuAIrDr932XSb6Jk3J1M22M3E2ylQ="
+              crossorigin="anonymous"></script>
+              <script
+              src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+              integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+              crossorigin="anonymous"></script>
+              <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+
 </head>
 <body id="pageBody">
+ <!--<template id="auto-complete">
+         <input type="text" name="@{{id}}"  listo="@{{id}}"  :style="styleObject" /> 
+         <datalist id="@{{id}}">
+         <option v-for="framework in frameworks"  value="@{{framework}}" />
+         </datalist>
+
+         
+        </template>
+        <template id="auto-complete">
+         <input type="text" :name="id"  :listo="id"  :style="styleObject" /> 
+         <datalist :id="id">
+         <option v-for="framework in frameworks"  :value="framework" />
+         </datalist>
+
+         
+        </template>-->
 
 <div id="decorative2">
     <div class="container">
@@ -200,22 +224,136 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.0/vue.js"></script>
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.0/vue.js"></script>-->
+
+<script src="bootstrap-gen-2/scripts/jquery.min.js" type="text/javascript"></script> 
+<script src="bootstrap-gen-2/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+
+<script src="bootstrap-gen-2/scripts/easing/jquery.easing.1.3.js" type="text/javascript"></script>
+
+<script>
+   // alert("poraqui");
+    var selectIds = $('#panel1,#panel2,#panel3');
+$(function ($) {
+ 
+    selectIds.on('show.bs.collapse hidden.bs.collapse', function () {
+    //  selectIds.on("hide.bs.collapse show.bs.collapse", ".collapse", function (event) {
+           alert("porqui 3");
+        $(this).prev().find('.general').toggleClass('foundicon-plus foundicon-minus');
+        //event.stopPropagation();
+    })
+});
+
+
+
+/*selectIds.on("hide.bs.collapse show.bs.collapse", ".collapse", function (event) {
+    $(this).prev().find('.general').toggleClass('foundicon-plus foundicon-minus');
+    $(this).prev().find("span.pull-right.text-muted").toggleClass("expandir fechar");
+    event.stopPropagation();
+});*/
+</script>
+<script src="bootstrap-gen-2/scripts/default.js" type="text/javascript"></script>
+
+<script src="node_modules/vue/dist/vue.js" type="text/javascript"></script>
 <script>
 var valor = new Vue({
   el: '#valor',
   data: {
-    picked: '',
+    personType: '',
     preidentificator: '',
     identificator: '',
     naturalBlock: false,
+    hasAdicionalOwner: false,
     block: false,
-    legalBlock: false
+    legalBlock: false,
+    selectedNetwork: [''],
+    selectedServices: [''],
+    selectedTransport: [''],
+    selectedMachine: [''],
+    selectedTroubles: [''],
+    selectedWater: [''],
+    selectedVia: [''],
+    selectedDestiny: [''],
+    selectedBuilding: [''],
+    selectedIrigation: [''],
+    vegetalBlock: false,
+    pecuarioBlock: false,
+    agroIndustriaBlock: false,
+    sectorVegetal: false,
+    sectorPecuario: false,
+    sectorAgroIndustria: false,
+
+
+
+    
+        
+    list: '',
+
+    optionsData: {
+               natural: [
+                    { text: 'Venezolano', value: 'V' },
+                    { text: 'Extranjero', value: 'E' },
+               ],
+               
+               juridica: [
+                   { text: 'J', value: 'j' },
+                   { text: 'G', value: 'g' },
+                   { text: 'E.P.S', value: 'eps' },
+                   { text: 'r', value: 'r' },
+               ]
+           },
   },
+       
+       computed: {
+       
+           optionser: function() {
+           
+           var optionser = ''
+
+                switch(this.personType) {
+
+                    case 'Natural':
+                    optionser = this.optionsData.natural;
+                    this.preidentificator = 'Nacionalidad';
+                    this.identificator = 'Cédula o Nro.Pasaporte';
+                    this.naturalBlock = true;
+                    this.hasAdicionalOwner = true;
+                    this.legalBlock = false;
+                    this.block = true;
+
+                    break;
+                    
+                    case 'Jurídica':
+                    optionser = this.optionsData.juridica;
+                    this.preidentificator = 'Código';
+                    this.identificator = 'RIF';
+                    this.naturalBlock = false;
+                    this.hasAdicionalOwner = true;                    
+                    this.legalBlock = true;
+                    this.block = true;
+                    break;
+
+                    default:
+                    optionser = this.optionsData.natural
+                }
+
+
+
+                return optionser
+           
+           }
+       
+       },
+       
+
     methods: {
-    greet: function (event) {
+    personTypeSelected: function (event) {
       // `this` inside methods points to the Vue instance
-      if (this.picked === "Persona Natural") {
+
+       this.optionser = this.optionser
+      /*if (this.personType === "Persona Natural") {
         this.preidentificator = 'Nacionalidad';
         this.identificator = 'Cédula o Nro.Pasaporte';
         this.naturalBlock = true;
@@ -229,22 +367,81 @@ var valor = new Vue({
             this.naturalBlock = false;
             this.legalBlock = true;
             this.block = true;
+        }*/
+      // `event` is the native DOM event
+      
+    },
+    vegetalSelected: function (event) {
+      if (this.sectorVegetal) {
+        this.vegetalBlock = false;
+      }
+      else {
+        this.vegetalBlock = true;
+      }
+    },
+    pecuarioSelected: function (event) {
+        if (this.sectorPecuario) {
+            this.pecuarioBlock = false;
         }
+        else {
+            this.pecuarioBlock = true;
+        }
+    },
+   agroIndustriaSelected: function (event) {
+        if (this.sectorAgroIndustria) {
+            this.agroIndustriaBlock = false;
+        }
+        else {
+            this.agroIndustriaBlock = true;
+        }
+    },
+    preIdentificatorSelected: function (event) {
+      // `this` inside methods points to the Vue instance
+
+       if (this.list === "V") {
+        this.identificator = 'Cédula';
+      }
+        
+        else if (this.list === "E"){
+            this.identificator = 'Pasaporte';
+        }
+
+        /*else {
+            this.identificator = 'Código';
+        }*/
       // `event` is the native DOM event
       
     }
   }
 })
 </script>
-<!--<script src="../node_modules/vue/dist/vue.js" type="text/javascript"></script> -->
-<script src="/js/runoppa.js" type="text/javascript"></script> 
-<script src="/bootstrap-gen-2/scripts/jquery.min.js" type="text/javascript"></script> 
-<script src="/bootstrap-gen-2/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/bootstrap-gen-2/scripts/default.js" type="text/javascript"></script>
+<script>
+
+Vue.component('auto-complete', {
+    props : ['frameworks', 'id'],
+    template : "#auto-complete",
+    //template :'<div>A custom component!</div>'
+})
+
+new Vue({
+ el: '#app',
+
+data: {
+    id: 'jsFrameworks',
+    listo: [
+       'JQuery',
+       'React',
+       'VueJs',
+       'AngularJs',
+    ],
+   }
+})
+</script>
 
 
-<script src="/bootstrap-gen-2/scripts/carousel/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script><script type="text/javascript">$('#list_photos').carouFredSel({ responsive: true, width: '100%', scroll: 2, items: {width: 320,visible: {min: 2, max: 6}} });</script><script src="bootstrap-gen-2/scripts/camera/scripts/camera.min.js" type="text/javascript"></script>
-<script src="/bootstrap-gen-2/scripts/easing/jquery.easing.1.3.js" type="text/javascript"></script>
-<script type="text/javascript">function startCamera() {$('#camera_wrap').camera({ fx: 'scrollLeft', time: 2000, loader: 'none', playPause: false, navigation: true, height: '65%', pagination: true });}$(function(){startCamera()});</script>
+ 
+
+
+
 </body>
 </html>
