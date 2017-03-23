@@ -599,7 +599,7 @@
                       </div>
                       
                       <div class="span4">
-                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nacionalidad">
+                        <input type="text" class="form-control" id="contactFirstName" name="contactFirstname" placeholder="Nacionalidad">
                       </div>
                       
                       <div class="span2">     
@@ -617,7 +617,7 @@
                       </div>
                       
                       <div class="span4">
-                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Primer nombre">
+                        <input type="text" class="form-control" id="contactFirstname" name="contactFirstname" placeholder="Primer nombre">
                       </div>
                       
                       <div class="span2">     
@@ -649,7 +649,7 @@
 
                     <div id="apellidos">
                       <div class="span2"> 
-                        <label for="lastname">Teléfono</label>
+                        <label>Teléfono</label>
                       </div>
 
                       <div class="span4">
@@ -657,7 +657,7 @@
                       </div>
                       
                       <div class="span2"> 
-                        <label for="surname">Relación</label>
+                        <label>Relación</label>
                       </div>
                       
                       <div class="span4">
@@ -689,7 +689,7 @@
                   <div class="panel-body">
                     <div id="certificacion1">
                       <div class="span2"> 
-                        <label for="lastname">Serial</label>
+                        <label>Serial</label>
                       </div>
 
                       <div class="span4">
@@ -738,7 +738,7 @@
                   <div class="panel-body">
                     <div>
                       <div class="span2"> 
-                        <label for="lastname">Tipo documento</label>
+                        <label>Tipo documento</label>
                       </div>
 
                       <div class="span4">
@@ -746,7 +746,7 @@
                       </div>
 
                       <div class="span2"> 
-                        <label for="surname">Nro documento tierra</label>
+                        <label>Nro documento tierra</label>
                       </div>
 
                       <div class="span4">
@@ -756,7 +756,7 @@
 
                     <div>
                       <div class="span2"> 
-                        <label for="lastname">Nombre</label>
+                        <label>Nombre</label>
                       </div>
 
                       <div class="span4">
@@ -764,7 +764,7 @@
                       </div>
 
                       <div class="span2"> 
-                        <label for="surname">Total superficie</label>
+                        <label>Total superficie</label>
                       </div>
 
                       <div class="span4">
@@ -774,7 +774,7 @@
 
                     <div>
                       <div class="span2"> 
-                        <label for="lastname">Superficie usable</label>
+                        <label>Superficie usable</label>
                       </div>
 
                       <div class="span4">
@@ -792,19 +792,15 @@
 
                     <div>
                       <div class="span2"> 
-                        <label for="lastname">Tipo de tenencia</label>
+                        <label>Tipo de tenencia</label>
                       </div>
 
                       <div class="span4">
                         <input type="text" class="form-control" id="usablesurface" name="usablesurface" placeholder="Superficie usable (km2)">
                       </div>
 
-                      <div class="span2"> 
-                        <label>--</label>
-                      </div>
-
-                      <div class="span4">
-                        ---
+                      <div class="span6"> 
+                      &nbsp;
                       </div>
                     </div>
 
@@ -834,7 +830,7 @@
 
                     <div>
                       <div class="span2"> 
-                        <label for="lastname">Dep. control calidad</label>
+                        <label>Dep. control calidad</label>
                       </div>
 
                       <div class="span4">
@@ -910,17 +906,17 @@
                       </div>
 
                       <div class="span4">
-                        <input type="radio" name="agency" value="Si"> 
+                        <input type="radio" name="organism" value="Si"> 
                         <label>Si</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="radio" name="agency" value="No">
+                        <input type="radio" name="organism" value="No">
                         <label>No</label>
                       </div>
 
                       <div class="span6"> 
-                        <label for="surname">&nbsp;</label>
+                        <label>&nbsp;</label>
                       </div>
                     </div>
-
+                     <div class="span12">&nbsp;</div> 
                     <div>
                       <div class="span2"> 
                         <label>Servicios</label>
@@ -939,7 +935,7 @@
                       </div>
 
                       <div class="span2">     
-                         <label for="secondname">Transporte</label>
+                         <label>Transporte</label>
                       </div>
 
                       <div class="span4">
@@ -949,7 +945,6 @@
                           <option>Pickup</option>
                           <option>Camión</option>
                         </select>
-                        
                       </div>
                     </div>
 
@@ -963,7 +958,7 @@
                     </div>
                     <div>
                       <div class="span2"> 
-                        <label for="firstname">Maquinaria</label>
+                        <label>Maquinaria</label>
                       </div>
 
                       <div class="span4">
@@ -975,7 +970,7 @@
                       </div>
 
                       <div class="span2">     
-                        <label for="secondname">Edificios</label>
+                        <label>Edificios</label>
                       </div>
 
                       <div class="span4">
@@ -999,7 +994,7 @@
 
                     <div>
                       <div class="span2"> 
-                        <label for="firstname">Problemas frecuentes</label>
+                        <label>Problemas frecuentes</label>
                       </div>
 
                       <div class="span4">
@@ -1012,7 +1007,7 @@
                       </div>
 
                       <div class="span2"> 
-                        <label for="firstname">Principal fuente de agua</label>
+                        <label>Principal fuente de agua</label>
                       </div>
 
                       <div class="span4">
@@ -1041,7 +1036,7 @@
 
                     <div>
                       <div class="span2"> 
-                        <label for="firstname">Vialidad agrícola</label>
+                        <label>Vialidad agrícola</label>
                       </div>
 
                       <div class="span4">
@@ -1056,7 +1051,7 @@
                       </div>
 
                       <div class="span2"> 
-                        <label for="firstname">Destino de la producción</label>
+                        <label>Destino de la producción</label>
                       </div>
 
                       <div class="span4">
@@ -1070,9 +1065,6 @@
                         </select>
                       </div>
                     </div>
-
-
-
                     <div>
                       <div class="span6">
                         <span>@{{ selectedVia }}</span>
@@ -1087,7 +1079,7 @@
                         <span> Tipo de sector: &nbsp;&nbsp;&nbsp;
                             <input type="checkbox" name="sectorVegetal" value="vegetal" v-model="sectorVegetal" v-on:click="vegetalSelected">Vegetal&nbsp;&nbsp;&nbsp;
                             <input type="checkbox" name="sectorPecuario" value="pecuario" v-model="sectorPecuario" v-on:click="pecuarioSelected">Pecuario&nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" name="sectorAgroIndustria" value="agroIndustria" v-model="sectorAgroIndustria" v-on:checked="agroIndustriaSelected">Agroindustria
+                            <input type="checkbox" name="sectorAgroIndustria" value="agroIndustria" v-model="sectorAgroIndustria" v-on:click="agroIndustriaSelected">Agroindustria
                          </span>
                       </div>
                     </div> 
@@ -1096,11 +1088,11 @@
                     <div v-if="vegetalBlock">                  
                       <div>
                         <div class="span2"> 
-                          <label for="surname">Método Riego</label>
+                          <label>Método Riego</label>
                         </div>
 
                         <div class="span4">
-                          <select v-model="selectedIrigation" multiple>
+                          <select v-model="selectedIrrigation" multiple>
                             <option>Aspersión</option>
                             <option>Bombeo mecánico</option>
                             <option>Goteo</option>
@@ -1108,20 +1100,21 @@
                             <option>Microaspersión</option>
                             <option>No posee</option>
                           </select>
-                        </div>
-
+                         </div>
+                      
                         <div class="span2"> 
-                          <label for="surname">Capacidad Riego</label>
+                          <label>Capacidad Riego</label>
                         </div>
 
                         <div class="span4">
-                          <input type="text" class="form-control" id="docnumber" name="docnumber" placeholder="Capacidad de Riego (Hect)">
+                          <input type="text" class="form-control" id="irrigationCapacity" name="irrigationCapacity" placeholder="Capacidad de Riego (Hect)">
                         </div>
-                      </div> 
-                      
+                       
+                      </div>
+                      <div class="span12">&nbsp;</div>
                       <div>
                         <div class="span2"> 
-                          <label for="lastname">Tipo ambiente</label>
+                          <label>Tipo ambiente</label>
                         </div>
 
                         <div class="span4">
@@ -1130,179 +1123,171 @@
                           <input type="radio" name="environmentType" value="unprotected">
                           <label>Cielo abierto</label>
                         </div>
+                      
 
+                      
                         <div class="span2"> 
-                          <label for="lastname">Ciclo</label>
+                          <label>Ciclo</label>
                         </div>
 
                         <div class="span4">
-                          <input type="radio" name="cycle" value="short"> 
+                          <input type="radio" name="cycle" value="short" v-model="cycle" v-on:change="cycleSelected"> 
                           <label>Corto</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                          <input type="radio" name="cycle" value="semishort">
+                          <input type="radio" name="cycle" value="semishort" v-model="cycle" v-on:change="cycleSelected">
                           <label>SemiPermanente</label>
-                          <input type="radio" name="cycle" value="long">
+                          <input type="radio" name="cycle" value="long" v-model="cycle" v-on:change="cycleSelected">
                           <label>Permanente</label>                          
                         </div>
                       </div>
                         <br/><hr>
-                      <!--Bloques de ciclos cortos, permaente o semipermanente-->  
-                      <div>
+                      <!--Bloques de ciclos cortos-->  
+                      <div v-if="vegetalShortCycle">
                         <div>
                           <div class="span2"> 
-                            <label for="lastname">Nombre</label>
+                            <label>Nombre</label>
                           </div>
 
                           <div class="span4">
-                            <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Ciclo">    
+                            <input type="text" class="form-control" id="shortNameCultivation" name="shortNameCultivation" placeholder="Nombre de cultivo">    
                           </div>
 
                           <div class="span2"> 
-                            <label for="lastname">Superficie Hect</label>
+                            <label>Superficie Hect</label>
                           </div>
 
                           <div class="span4">
-                            <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Ciclo">
+                            <input type="text" class="form-control" id="shortSurface" name="shortSurface" placeholder="Superficie en hectáreas">
                           </div>
                         </div>
 
                         <div>
                           <div class="span2"> 
-                            <label for="lastname">Producción últ cosecha</label>
+                            <label>Producción últ cosecha</label>
                           </div>
 
                           <div class="span4">
-                            <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Ciclo">    
+                            <input type="text" class="form-control" id="lastProductionHarvest" name="lastProductionHarvest" placeholder="Producción última cosecha">    
                           </div>
 
                           <div class="span2"> 
-                            <label for="lastname">Año Ult. cosecha</label>
+                            <label>Año últ. cosecha</label>
                           </div>
 
                           <div class="span4">
-                            <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Ciclo">
+                            <input type="text" class="form-control" id="lastYearHarvest" name="lastYearHarvest" placeholder="Año última cosecha">
                           </div>
                         </div>                      
 
                         <div>
                           <div class="span2"> 
-                            <label for="lastname">Mes y año de siembra</label>
+                            <label>Mes y año de siembra</label>
                           </div>
 
                           <div class="span4">
-                            <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Ciclo">    
+                            <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            </select>
+                            <input type="text" class="form-control" id="plantYear" name="plantYear" placeholder="Año siembra">    
                           </div>
 
                           <div class="span2"> 
-                            <label for="lastname">Tipo</label>
+                            <label>Tipo</label>
                           </div>
 
                           <div class="span4">
-                            <input type="radio" name="cycle" value="short"> 
+                            <input type="radio" name="shortPermanentType" value="short"> 
                             <label>Intención de siembra</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="cycle" value="semishort">
+                            <input type="radio" name="shortPermanentType" value="semishort">
                             <label>Sembrado</label>
                           </div>
                         </div>                      
                       </div>
                       <!--Ciclo semipermanente/permanente-->
-                                            <div>
+                      <div v-if="vegetalLongCycle">
                         <div>
                           <div class="span2"> 
-                            <label for="lastname">Nombre</label>
+                            <label>Nombre</label>
                           </div>
 
                           <div class="span4">
-                            <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Ciclo">    
+                            <input type="text" class="form-control" id="longCultivationName" name="longCultivationName" placeholder="Nombre del cultivo">    
                           </div>
 
                           <div class="span2"> 
-                            <label for="lastname">Superficie Hect</label>
+                            <label>Superficie Hect</label>
                           </div>
 
                           <div class="span4">
-                            <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Ciclo">
+                            <input type="text" class="form-control" id="longSurface" name="longSurface" placeholder="Superficie en hectáreas">
                           </div>
                         </div>
 
                         <div>
                           <div class="span2"> 
-                            <label for="lastname">Año fundación</label>
+                            <label>Año fundación</label>
                           </div>
 
                           <div class="span4">
-                            <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Ciclo">    
+                            <input type="text" class="form-control" id="longFoundationYear" name="longFoundationYear" placeholder="Año de Fundación">    
                           </div>
 
                           <div class="span2"> 
-                            <label for="lastname">Año Renovación</label>
+                            <label>Año Renovación</label>
                           </div>
 
                           <div class="span4">
-                            <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Año renovación">
+                            <input type="text" class="form-control" id="longRenewalYear" name="longRenewalYear" placeholder="Año renovación">
                           </div>
                         </div>                      
 
                         <div>
-
                           <div class="span2"> 
-                            <label for="lastname">Tipo</label>
+                            <label>Tipo</label>
                           </div>
 
                           <div class="span4">
-                            <input type="radio" name="permanentType" value="intencion"> 
+                            <input type="radio" name="longPermanentType" value="intended"> 
                             <label>Intención de siembra</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="permanentType" value="plantados">
+                            <input type="radio" name="longPermanentType" value="plant">
                             <label>Plantados</label>
                           </div>
 
                           <div class="span6"> 
                             &nbsp;
                           </div>
-
                         </div>                      
-                      </div>
-
-                    </div>              
-                    <!--Fin sector vegetal-->
+                      </div> <!--End VegetalLongCycle-->
+                    </div>  <!--Fin sector vegetal-->
+                   
 
                     <!--Inicio sector pecuario--> 
                     <div v-if="pecuarioBlock">                  
                       <div>
-                        <div class="span2"> 
-                          <label for="lastname">Modalidad de producción</label>
-                        </div>
-
-                        <div class="span4">
-                          <input type="text" class="form-control" id="documentType" name="documenttype" placeholder="Ciclo">
-                        </div>
-
-                        <div class="span2"> 
-                          <label for="surname">Mét. Irrigación</label>
-                        </div>
-
-                        <div class="span4">
-                          <input type="text" class="form-control" id="docnumber" name="docnumber" placeholder="Método de irrigación">
+                        <div class="span12"> 
+                          <label>Sector pecuario en construcción</label>
                         </div>
                       </div>
+                    </div>  
 
+                    <div v-if="agroIndustriaBlock">                  
                       <div>
-                        <div class="span2"> 
-                          <label for="lastname">Tipo ambiente</label>
+                        <div class="span12"> 
+                          <label>Sector agroindustria en construcción</label>
                         </div>
-
-                        <div class="span4">
-                          <input type="text" class="form-control" id="documenttype" name="documenttype" placeholder="Tipo de ambiente">
-                        </div>
-
-                        <div class="span2"> 
-                          <label for="surname">Cap. Irrigación</label>
-                        </div>
-
-                        <div class="span4">
-                          <input type="text" class="form-control" id="docnumber" name="docnumber" placeholder="Capacidad de irrigación">
-                        </div>
-                      </div>  
-                    </div>                  
+                      </div>
+                    </div>                      
+                                     
                     <!--Fin sector pecuario-->
 
 

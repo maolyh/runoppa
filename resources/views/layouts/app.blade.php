@@ -277,8 +277,11 @@ var valor = new Vue({
     selectedVia: [''],
     selectedDestiny: [''],
     selectedBuilding: [''],
-    selectedIrigation: [''],
+    selectedIrrigation: [''],
+    cycle: '',
     vegetalBlock: false,
+    vegetalShortCycle: false,
+    vegetalLongCycle: false,
     pecuarioBlock: false,
     agroIndustriaBlock: false,
     sectorVegetal: false,
@@ -379,6 +382,17 @@ var valor = new Vue({
         this.vegetalBlock = true;
       }
     },
+cycleSelected: function (event) {
+      if (this.cycle === "short") {
+        this.vegetalShortCycle = true;
+        this.vegetalLongCycle = false;
+      }
+      else {
+        this.vegetalShortCycle = false;
+        this.vegetalLongCycle = true;
+      }      
+    },
+   
     pecuarioSelected: function (event) {
         if (this.sectorPecuario) {
             this.pecuarioBlock = false;
