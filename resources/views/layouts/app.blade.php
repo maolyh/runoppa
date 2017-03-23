@@ -235,12 +235,12 @@
 
 <script>
    // alert("poraqui");
-    var selectIds = $('#panel1,#panel2,#panel3');
+    var selectIds = $('#panel1,#panel2,#paneld2,#panel6, #panel8');
 $(function ($) {
  
     selectIds.on('show.bs.collapse hidden.bs.collapse', function () {
     //  selectIds.on("hide.bs.collapse show.bs.collapse", ".collapse", function (event) {
-           alert("porqui 3");
+          // alert("porqui 3");
         $(this).prev().find('.general').toggleClass('foundicon-plus foundicon-minus');
         //event.stopPropagation();
     })

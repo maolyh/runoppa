@@ -1144,7 +1144,7 @@
                           <label>Permanente</label>                          
                         </div>
                       </div>
-                        
+                        <br/><hr>
                       <!--Bloques de ciclos cortos, permaente o semipermanente-->  
                       <div>
                         <div>
