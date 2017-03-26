@@ -1103,7 +1103,7 @@
                          </div>
                       
                         <div class="span2"> 
-                          <label>Capacidad Riego</label>
+                          <label>Capacidad de riego</label>
                         </div>
 
                         <div class="span4">
@@ -1114,7 +1114,7 @@
                       <div class="span12">&nbsp;</div>
                       <div>
                         <div class="span2"> 
-                          <label>Tipo ambiente</label>
+                          <label>Tipo de ambiente</label>
                         </div>
 
                         <div class="span4">
@@ -1235,7 +1235,7 @@
 
                         <div>
                           <div class="span2"> 
-                            <label>Año fundación</label>
+                            <label>Año de fundación</label>
                           </div>
 
                           <div class="span4">
@@ -1243,7 +1243,7 @@
                           </div>
 
                           <div class="span2"> 
-                            <label>Año Renovación</label>
+                            <label>Año de renovación</label>
                           </div>
 
                           <div class="span4">
