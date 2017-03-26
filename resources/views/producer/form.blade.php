@@ -1088,7 +1088,7 @@
                     <div v-if="vegetalBlock">                  
                       <div>
                         <div class="span2"> 
-                          <label>Método Riego</label>
+                          <label>Método de riego</label>
                         </div>
 
                         <div class="span4">
